@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/estilos.css">
+  <title>Documentación de la Api</title>
+</head>
+<body>
+  <h1>Documentación de la Api</h1>
+  <hr>
+  <h3>Documentación del ENDPOINT USUARIO</h3>
+  <table>
+    <tr>
+      <tr><td>Numero</td> <td>1</td></tr>
+     <tr> <td>Nombre del Servicio</td> <td>Listar Usuarios</td></tr>
+      <tr><td>Uri</td> <td>/usuario/listar</td></tr>
+      <tr><td>Descripción</td> <td>Permite listar los usuarios registrados en la base de datos</td></tr>
+      <tr><td>Verbo HTTP</td> <td>GET</td></tr>
+      <tr><td>Header</td> <td>Null</td></tr>
+      <tr><td>Usuarios</td> <td>Administrador</td></tr>
+      <tr><td>Request json</td> <td>{nombre:'Karen'}</td></tr>
+      <tr><td>Respuesta json</td> <td>
+        Correcto:
+        Status:200
+        Json:
+        {
+        "idUsuario": 1,
+        "nombres": "Jaider",
+        "direccion": "calle 2",
+        "telefono": "3123972180",
+        "correo": "mateo08112@gmail.com",
+        "rol": "administrador",
+        "password": "123"
+      }
+      
+      Incorrecto:
+      Status:404
+      body:{
+        status:404,
+        message: "Error al listar usuario"
+      }
+      Error:
+      Status:500,
+      body:{
+        Status:500,
+        message:"Error en el sistema" +error
+      }
+    </td></tr>
+
+    </tr>
+  </table>
+</body>
+</html>
